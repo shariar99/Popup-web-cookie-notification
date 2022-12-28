@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Popup notification html</title>
+</head>
+
+<body onload="showModel()">
+    <div id="modelbox">
+        <img src="res/cookies.png" class="cookies">
+        <p>We use cookie to optimize user experience and content </p>
+        <button type="button" onclick="closeModel()">Accept</button>
+        <img src="res/close.png" class="closeIcon" onclick="closeModel()">
+
+    </div>
+    <script>
+        let modelbox = document.getElementById("modelbox");
+
+        function showModel() {
+            setTimeout(() => {
+                modelbox.style.display = "block";
+            }, 1000)
+        }
+
+        function closeModel() {
+            modelbox.style.display = "none";
+        }
+    </script>
+
+
+</body>
+
+</html>
